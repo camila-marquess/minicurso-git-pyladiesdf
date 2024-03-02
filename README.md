@@ -1,6 +1,6 @@
-# Minicurso 'Criando meu primeiro repositório no GitHub' - Palco Multiuso PyLadies DF CPBSBS6
+# Minicurso 'Criando meu primeiro repositório no GitHub' - Palco Multiuso PyLadies DF CPBSB6
 
-Este repositório contém o tutorial do passo a passo para a criação do seu primeiro repositório no GitHub. Se encontrar erros ou tiver sugestões de melhorias, sinta-se a vontade para comentar! 
+Este repositório contém o tutorial com o passo a passo para a criação do seu primeiro repositório no GitHub. Se encontrar erros ou tiver sugestões de melhorias, sinta-se a vontade para comentar! 
 
 ## 1. Crie sua conta no GitHub
 
@@ -52,7 +52,7 @@ cat id_rsa.pub
 
 * No GitHub, vá em seu perfil, depois em settings -> SSH and GPG Keys -> New SSH key, dê um título à sua chave ssh e cole-a em Key, conforme print abaixo: 
 
-![chave ssh github](/prints/image-2.png)
+![chave ssh github](/prints/new_ssh.png)
 
 * Por fim, clique em Add SSH Key.
 
@@ -84,7 +84,7 @@ git config user.email
 
 * Abra um novo terminal, conforme print abaixo: 
 
-![terminal do VS Code](/prints/image.png)
+![terminal do VS Code](/prints/new_terminal.png)
 
 * Crie uma nova pasta: 
 
@@ -102,7 +102,7 @@ mkdir projeto-cpbsb6
 
 * Feito isso, clique em File e depois em Open Folder, conforme print abaixo, e abra a pasta projeto-cpbsb6: 
 
-![caminho da pasta](/prints/image-1.png)
+![caminho da pasta](/prints/open_folder.png)
 
 * Agora crie um arquivo chamado hello_world.py na sua pasta projeto-cpbsb6.
 
@@ -128,7 +128,7 @@ Esse comando irá transformar a sua pasta em um repositório Git. Você deve vis
 
 * Após criar seu repositório, você verá uma imagem parecida com a imagem abaixo: 
 
-![repo git](image.png)
+![repo git](/prints/git_init.png)
 
 * No nosso caso, vamos seguir os comandos que estiverem no bloco '…or push an existing repository from the command line'. Então execute os comandos abaixo:
 
@@ -147,3 +147,5 @@ git commit -m "feat: criando meu primeiro hello world"
 ```
 git push origin main
 ```
+
+* Então volte à página do GitHub e atualize-a para verificar as suas mudanças.
