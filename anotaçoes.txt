@@ -1,0 +1,7 @@
+Adicionar - o que é git (essa parte poderia ser o link da apresentação) [FEITO]
+Adicionar - O que são branches [FEITO]
+Adicionar - Diferenças entre fork e clone
+Adicionar - o que é Staging area
+Adicionar - como fazer um commit
+Comando úteis: git status, git log, git show, git diff, git clone (sugerir de clonar o nosso repo e sugerir modificações)
+(adicionar gifs no tutorial hehe)
