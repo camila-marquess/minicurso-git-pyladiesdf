@@ -2,6 +2,8 @@
 
 Este repositório contém o tutorial com o passo a passo para a criação do seu primeiro repositório no GitHub. Se encontrar erros ou tiver sugestões de melhorias, sinta-se a vontade para comentar! 
 
+Não estava na oficina e tem dúvidas sobre o que é Git? Aqui temos o [link](endereço) da apresentação onde explicamos o que é Git e GitHub. Sinta-se a vontade para acessá-lo e descobrir mais sobre o assunto! 
+
 ## 1. Crie sua conta no GitHub
 
 * Acesse o [GitHub](https://www.github.com) e clique em 'Sign up for GitHub'. 
@@ -149,3 +151,23 @@ git push origin main
 ```
 
 * Então volte à página do GitHub e atualize-a para verificar as suas mudanças.
+
+* Para mais informações sobre como criar um repositório no GitHub, olhar o [link](https://docs.github.com/pt/repositories/creating-and-managing-repositories/quickstart-for-repositories).
+
+## 7. Entendendo o conceito de branches
+
+* A tradução de branch é a de ramificação. Imagine que em um repositório há uma branch principal (que está em produção), geralmente chamada de 'main'. Mas como você pode fazer testes e desenvolver novos desenvolvimentos de forma isolada sem impactar o que está em produção? Por meio de outras branches! Então você cria outras ramificações para trabalhar nesses novos desenvolvimentos e depois mergeá-los à branch principal.
+
+* Então vamos criar uma nova branch onde iremos fazer uma alteração no nosso arquivo hello_world.py, digite o seguinte comando: 
+
+```
+git checkout -b <nome-da-minha-nova-branch>
+```
+
+* Como checar se a minha branch foi criada? 
+
+```
+git branch
+```
+
+* Se você digitar o comando acima, ele mostrará todas as branches deste repositório, a branch que você está é a que começa com *.
