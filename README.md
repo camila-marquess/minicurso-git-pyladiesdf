@@ -182,6 +182,16 @@ git branch
 
 ## 9. Staging area
 
-* Staging area ou área de preparação 
+* Staging area ou área de preparação é um conceito intermediário entre o diretório de trabalho e o repositório Git. É onde você prepara as mudanças que deseja incluir no próximo commit. 
+
+* Ao fazer modificações nos arquivos no diretório de trabalho, ao usar o comando `git add` essas mudanças vão para a staging area. Essas alterações estão sendo preparadas para serem incluídas no commit. Ainda na staging area você pode usar o comnado `git reset` e remover as mudanças da staging area.
+
+* Após o `git add` as mudanças passam a estar na staging area. Com o comando `git commit` as mudanças são confirmadas no repositório Git local, não no diretório de trabalho. Isso significa que as alterações agora estão registradas no histórico de commits do seu repositório local. 
+
+* Para que as alterações sejam enviadas para o repositório remoto como o GitHub, é preciso executar o comando `git push`. O `git push` envia os commits locais para o repositório remoto, atualizando o repositório remoto com as mudanças e também as tornam acessíveis para os colaboradores.
 
 ![git staging](/prints/git_staging.png)
+
+
+## 10. Como fazer commit
+
