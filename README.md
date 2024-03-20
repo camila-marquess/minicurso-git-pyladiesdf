@@ -222,3 +222,49 @@ Sites de apoio ao material:
 
 ## 11. Outros comandos
 
+### git status
+
+O comando `git status` mostra o estado do diretório de trabalho e da staging area. Ao executar o comando, o Git fornece informações sobre quais arquivos foram modificados, adicionados ou removidos desde o último commit, e também informa sobre arquivos que estão na staging area, prontos para serem commitados.
+
+Para executar o comando:
+
+`git status`
+
+
+### git log
+
+O comando `git log` permite visualizar o histórico do repositório. Sua forma mais básica é:
+
+`git log`
+
+É possível compactar a formatação do comando:
+
+`git log --oneline`
+
+### git show
+
+Com o comnado `git show` é  utilizado para exibir informações detalhadas sobre um commit específico. Quando você executa git show seguido do identificador do commit (geralmente um hash SHA), o Git exibe informações sobre esse commit.
+
+O git show também pode ser utilizado sem especificar um commit, neste caso, ele exibirá as informações do commit mais recente.
+
+`git show`
+
+### git diff
+
+Para visualizar diferenças entre versões do projeto, é possível utilizar o comando git diff. O comando exibe diferenças no seguinte formato: uma versão é dada como versão mais antiga, a outra como mais nova, as linhas que a versão mais nova introduziu são marcadas com um + e as que a versão mais nova removeu são marcadas com um -. Para visualizar a diferença entre um commit antigo "hash_commit_antigo" e um commit novo "hash_commit_novo", basta executar:
+
+`git diff hash_commit_antigo hash_commit_novo`
+
+Para sair do comando, basta digitar `q`.
+
+Para comparar duas branches `main` e `dev`, basta executar:
+
+
+`git diff main dev`
+
+### git clone
+
+O comando `git clone` é usado para criar uma cópia local de um repositório Git remoto. Geralmente é usado quando deseja iniciar o desenvolvimento em um novo projeto, colaborar em um projeto existente ou criar uma cópia de backup de um repositório remoto.
+
+
+`git clone <link-repo>`
