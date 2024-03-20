@@ -2,7 +2,7 @@
 
 Este repositório contém o tutorial com o passo a passo para a criação do seu primeiro repositório no GitHub. Se encontrar erros ou tiver sugestões de melhorias, sinta-se a vontade para comentar! 
 
-Não estava na oficina e tem dúvidas sobre o que é Git? Aqui temos o [link](endereço) da apresentação onde explicamos o que é Git e GitHub. Sinta-se a vontade para acessá-lo e descobrir mais sobre o assunto! 
+Não estava na oficina e tem dúvidas sobre o que é Git? Aqui temos o [link](https://www.canva.com/design/DAFdTK3jMBo/m71Og_6jedV5fuMzctV5uQ/edit?utm_content=DAFdTK3jMBo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) da apresentação onde explicamos o que é Git e GitHub. Sinta-se a vontade para acessá-lo e descobrir mais sobre o assunto! 
 
 ## 1. Crie sua conta no GitHub
 
@@ -171,3 +171,17 @@ git branch
 ```
 
 * Se você digitar o comando acima, ele mostrará todas as branches deste repositório, a branch que você está é a que começa com *.
+
+
+## 8. Fork vs Clone
+
+* Clone é uma operação que faz uma cópia de um repositório Git existente para sua máquina local por meio do comando git `git clone <repositorio>`. Com as devidas permissões é possível fazer alterações e subir no repositório remoto. 
+
+* Fork é uma cópia de um repositório Git existente para sua própria conta no GitHub. Com o fork é possível fazer alterações independentes do repositório original. Os forks são muito utilizados na contribuição de projetos com código aberto, onde é feito o fork do projeto, é feito as alterações no repositório 'forkado' e é feito então o 'pull request' para o repositório original com as atualizações. Para que as contribuiçoes sejam 'mergeadas' ou mescladas no repositório orginal passa por uma aprovação dos usuários que tem a devida permissão.
+
+
+## 9. Staging area
+
+* Staging area ou área de preparação 
+
+![git staging](/prints/git_staging.png)
