@@ -195,3 +195,30 @@ git branch
 
 ## 10. Como fazer commit
 
+Após fazer as alterações nos arquivos do diretório de trabalho, é preciso executar o comando `git add` e adicionar os arquivos modificados, por exemplo:
+
+```
+git add <arquivo1> <arquivo2> <arquivo3>
+```
+
+onde `<arquivo1>` é o nome de cada arquivo alterado. É possível ver cada arquivo quando executar o comando `git status`.
+
+Sabendo que as alterações estão na staging area, para que as alterações sejam incluídas no repositório é preciso executar o comando `git commit`. Assim como ao salvar um arquivo que foi editado, um commit registra alterações em um ou mais arquivos no seu branch. O Git atribui a cada commit um ID exclusivo, denominado SHA ou hash, que identifica:
+
+- Cada uma das alterações feitas;
+- O momento em que as alterações foram feitas;
+- O autor das alterações.
+
+Ao fazer um commit, você deve incluir uma mensagem que descreva brevemente as alterações com o seguinte comando:
+
+`git commit -m "mensagem de commit"`
+
+Sites de apoio ao material: 
+
+<https://docs.github.com/pt/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/about-commits>
+
+<https://petcomputacaoufrgs.github.io/intro-ao-git/>
+
+
+## 11. Outros comandos
+
