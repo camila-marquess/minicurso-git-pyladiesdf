@@ -2,7 +2,7 @@
 
 Este repositório contém o tutorial com o passo a passo para a criação do seu primeiro repositório no GitHub. Se encontrar erros ou tiver sugestões de melhorias, sinta-se a vontade para comentar! 
 
-Não estava na oficina e tem dúvidas sobre o que é Git? Aqui temos o [link](endereço) da apresentação onde explicamos o que é Git e GitHub. Sinta-se a vontade para acessá-lo e descobrir mais sobre o assunto! 
+Não estava na oficina e tem dúvidas sobre o que é Git? Aqui temos o [link](https://www.canva.com/design/DAFdTK3jMBo/m71Og_6jedV5fuMzctV5uQ/edit?utm_content=DAFdTK3jMBo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) da apresentação onde explicamos o que é Git e GitHub. Sinta-se a vontade para acessá-lo e descobrir mais sobre o assunto! 
 
 ## 1. Crie sua conta no GitHub
 
@@ -171,3 +171,100 @@ git branch
 ```
 
 * Se você digitar o comando acima, ele mostrará todas as branches deste repositório, a branch que você está é a que começa com *.
+
+
+## 8. Fork vs Clone
+
+* Clone é uma operação que faz uma cópia de um repositório Git existente para sua máquina local por meio do comando git `git clone <repositorio>`. Com as devidas permissões é possível fazer alterações e subir no repositório remoto. 
+
+* Fork é uma cópia de um repositório Git existente para sua própria conta no GitHub. Com o fork é possível fazer alterações independentes do repositório original. Os forks são muito utilizados na contribuição de projetos com código aberto, onde é feito o fork do projeto, é feito as alterações no repositório 'forkado' e é feito então o 'pull request' para o repositório original com as atualizações. Para que as contribuiçoes sejam 'mergeadas' ou mescladas no repositório orginal passa por uma aprovação dos usuários que tem a devida permissão.
+
+
+## 9. Staging area
+
+* Staging area ou área de preparação é um conceito intermediário entre o diretório de trabalho e o repositório Git. É onde você prepara as mudanças que deseja incluir no próximo commit. 
+
+* Ao fazer modificações nos arquivos no diretório de trabalho, ao usar o comando `git add` essas mudanças vão para a staging area. Essas alterações estão sendo preparadas para serem incluídas no commit. Ainda na staging area você pode usar o comnado `git reset` e remover as mudanças da staging area.
+
+* Após o `git add` as mudanças passam a estar na staging area. Com o comando `git commit` as mudanças são confirmadas no repositório Git local, não no diretório de trabalho. Isso significa que as alterações agora estão registradas no histórico de commits do seu repositório local. 
+
+* Para que as alterações sejam enviadas para o repositório remoto como o GitHub, é preciso executar o comando `git push`. O `git push` envia os commits locais para o repositório remoto, atualizando o repositório remoto com as mudanças e também as tornam acessíveis para os colaboradores.
+
+![git staging](/prints/git_staging.png)
+
+
+## 10. Como fazer commit
+
+Após fazer as alterações nos arquivos do diretório de trabalho, é preciso executar o comando `git add` e adicionar os arquivos modificados, por exemplo:
+
+```
+git add <arquivo1> <arquivo2> <arquivo3>
+```
+
+onde `<arquivo1>` é o nome de cada arquivo alterado. É possível ver cada arquivo quando executar o comando `git status`.
+
+Sabendo que as alterações estão na staging area, para que as alterações sejam incluídas no repositório é preciso executar o comando `git commit`. Assim como ao salvar um arquivo que foi editado, um commit registra alterações em um ou mais arquivos no seu branch. O Git atribui a cada commit um ID exclusivo, denominado SHA ou hash, que identifica:
+
+- Cada uma das alterações feitas;
+- O momento em que as alterações foram feitas;
+- O autor das alterações.
+
+Ao fazer um commit, você deve incluir uma mensagem que descreva brevemente as alterações com o seguinte comando:
+
+`git commit -m "mensagem de commit"`
+
+Sites de apoio ao material: 
+
+<https://docs.github.com/pt/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/about-commits>
+
+<https://petcomputacaoufrgs.github.io/intro-ao-git/>
+
+
+## 11. Outros comandos
+
+### git status
+
+O comando `git status` mostra o estado do diretório de trabalho e da staging area. Ao executar o comando, o Git fornece informações sobre quais arquivos foram modificados, adicionados ou removidos desde o último commit, e também informa sobre arquivos que estão na staging area, prontos para serem commitados.
+
+Para executar o comando:
+
+`git status`
+
+
+### git log
+
+O comando `git log` permite visualizar o histórico do repositório. Sua forma mais básica é:
+
+`git log`
+
+É possível compactar a formatação do comando:
+
+`git log --oneline`
+
+### git show
+
+Com o comnado `git show` é  utilizado para exibir informações detalhadas sobre um commit específico. Quando você executa git show seguido do identificador do commit (geralmente um hash SHA), o Git exibe informações sobre esse commit.
+
+O git show também pode ser utilizado sem especificar um commit, neste caso, ele exibirá as informações do commit mais recente.
+
+`git show`
+
+### git diff
+
+Para visualizar diferenças entre versões do projeto, é possível utilizar o comando git diff. O comando exibe diferenças no seguinte formato: uma versão é dada como versão mais antiga, a outra como mais nova, as linhas que a versão mais nova introduziu são marcadas com um + e as que a versão mais nova removeu são marcadas com um -. Para visualizar a diferença entre um commit antigo "hash_commit_antigo" e um commit novo "hash_commit_novo", basta executar:
+
+`git diff hash_commit_antigo hash_commit_novo`
+
+Para sair do comando, basta digitar `q`.
+
+Para comparar duas branches `main` e `dev`, basta executar:
+
+
+`git diff main dev`
+
+### git clone
+
+O comando `git clone` é usado para criar uma cópia local de um repositório Git remoto. Geralmente é usado quando deseja iniciar o desenvolvimento em um novo projeto, colaborar em um projeto existente ou criar uma cópia de backup de um repositório remoto.
+
+
+`git clone <link-repo>`
