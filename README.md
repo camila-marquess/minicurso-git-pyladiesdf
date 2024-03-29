@@ -91,14 +91,6 @@ git config user.email
 * Crie uma nova pasta: 
 
 ```
-mkdir repositorios
-```
-
-```
-cd repositorios
-```
-
-```
 mkdir projeto-cpbsb6
 ```
 
@@ -106,15 +98,35 @@ mkdir projeto-cpbsb6
 
 ![caminho da pasta](/prints/open_folder.png)
 
-* Agora crie um arquivo chamado hello_world.py na sua pasta projeto-cpbsb6.
+* Agora crie um arquivo chamado hello_world.html na sua pasta projeto-cpbsb6, conforme print abaixo:
 
-* Dentro do arquivo, coloque o seguindo comando: 
+![criação de novo arquivo](/prints/new_file.png)
+
+* Dentro do arquivo, coloque o seguindo bloco de código: 
 
 ```
-print("Hello, World!")
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example</title>
+    </head>
+    <body>
+        <p>Hello, World!</p>
+    </body>
+</html>
 ```
 
 * Salve o arquivo clicando em ctrl + s. 
+
+* Para visualizar o html, basta clicar com o botão direito do mouse, ir em 'Reveal in File Explorer', conforme print: 
+
+![reveal file](/prints/reveal_file.png)
+
+* Depois pode dar dois cliques no arquivo:
+
+![file hello wworld](/prints/file.png)
+
+* E então você verá a mensagem 'Hello, World!' no seu browser.
 
 * Agora vá até o seu terminal e execute o seguinte comando: 
 
@@ -158,7 +170,7 @@ git push origin main
 
 * A tradução de branch é a de ramificação. Imagine que em um repositório há uma branch principal (que está em produção), geralmente chamada de 'main'. Mas como você pode fazer testes e desenvolver novos desenvolvimentos de forma isolada sem impactar o que está em produção? Por meio de outras branches! Então você cria outras ramificações para trabalhar nesses novos desenvolvimentos e depois mergeá-los à branch principal.
 
-* Então vamos criar uma nova branch onde iremos fazer uma alteração no nosso arquivo hello_world.py, digite o seguinte comando: 
+* Então vamos criar uma nova branch onde iremos fazer uma alteração no nosso arquivo hello_world.html. Digite o seguinte comando no seu terminal: 
 
 ```
 git checkout -b <nome-da-minha-nova-branch>
@@ -172,28 +184,7 @@ git branch
 
 * Se você digitar o comando acima, ele mostrará todas as branches deste repositório, a branch que você está é a que começa com *.
 
-
-## 8. Fork vs Clone
-
-* Clone é uma operação que faz uma cópia de um repositório Git existente para sua máquina local por meio do comando git `git clone <repositorio>`. Com as devidas permissões é possível fazer alterações e subir no repositório remoto. 
-
-* Fork é uma cópia de um repositório Git existente para sua própria conta no GitHub. Com o fork é possível fazer alterações independentes do repositório original. Os forks são muito utilizados na contribuição de projetos com código aberto, onde é feito o fork do projeto, é feito as alterações no repositório 'forkado' e é feito então o 'pull request' para o repositório original com as atualizações. Para que as contribuiçoes sejam 'mergeadas' ou mescladas no repositório orginal passa por uma aprovação dos usuários que tem a devida permissão.
-
-
-## 9. Staging area
-
-* Staging area ou área de preparação é um conceito intermediário entre o diretório de trabalho e o repositório Git. É onde você prepara as mudanças que deseja incluir no próximo commit. 
-
-* Ao fazer modificações nos arquivos no diretório de trabalho, ao usar o comando `git add` essas mudanças vão para a staging area. Essas alterações estão sendo preparadas para serem incluídas no commit. Ainda na staging area você pode usar o comnado `git reset` e remover as mudanças da staging area.
-
-* Após o `git add` as mudanças passam a estar na staging area. Com o comando `git commit` as mudanças são confirmadas no repositório Git local, não no diretório de trabalho. Isso significa que as alterações agora estão registradas no histórico de commits do seu repositório local. 
-
-* Para que as alterações sejam enviadas para o repositório remoto como o GitHub, é preciso executar o comando `git push`. O `git push` envia os commits locais para o repositório remoto, atualizando o repositório remoto com as mudanças e também as tornam acessíveis para os colaboradores.
-
-![git staging](/prints/git_staging.png)
-
-
-## 10. Como fazer commit
+## 8. Como fazer commit
 
 Após fazer as alterações nos arquivos do diretório de trabalho, é preciso executar o comando `git add` e adicionar os arquivos modificados, por exemplo:
 
@@ -211,13 +202,34 @@ Sabendo que as alterações estão na staging area, para que as alterações sej
 
 Ao fazer um commit, você deve incluir uma mensagem que descreva brevemente as alterações com o seguinte comando:
 
-`git commit -m "mensagem de commit"`
-
+```
+git commit -m "mensagem de commit"
+```
 Sites de apoio ao material: 
 
 <https://docs.github.com/pt/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/about-commits>
 
 <https://petcomputacaoufrgs.github.io/intro-ao-git/>
+
+
+## 9. Fork vs Clone
+
+* Clone é uma operação que faz uma cópia de um repositório Git existente para sua máquina local por meio do comando git `git clone <repositorio>`. Com as devidas permissões é possível fazer alterações e subir no repositório remoto. 
+
+* Fork é uma cópia de um repositório Git existente para sua própria conta no GitHub. Com o fork é possível fazer alterações independentes do repositório original. Os forks são muito utilizados na contribuição de projetos com código aberto, onde é feito o fork do projeto, é feito as alterações no repositório 'forkado' e é feito então o 'pull request' para o repositório original com as atualizações. Para que as contribuiçoes sejam 'mergeadas' ou mescladas no repositório orginal passa por uma aprovação dos usuários que tem a devida permissão.
+
+
+## 10. Staging area
+
+* Staging area ou área de preparação é um conceito intermediário entre o diretório de trabalho e o repositório Git. É onde você prepara as mudanças que deseja incluir no próximo commit. 
+
+* Ao fazer modificações nos arquivos no diretório de trabalho, ao usar o comando `git add` essas mudanças vão para a staging area. Essas alterações estão sendo preparadas para serem incluídas no commit. Ainda na staging area você pode usar o comnado `git reset` e remover as mudanças da staging area.
+
+* Após o `git add` as mudanças passam a estar na staging area. Com o comando `git commit` as mudanças são confirmadas no repositório Git local, não no diretório de trabalho. Isso significa que as alterações agora estão registradas no histórico de commits do seu repositório local. 
+
+* Para que as alterações sejam enviadas para o repositório remoto como o GitHub, é preciso executar o comando `git push`. O `git push` envia os commits locais para o repositório remoto, atualizando o repositório remoto com as mudanças e também as tornam acessíveis para os colaboradores.
+
+![git staging](/prints/git_staging.png)
 
 
 ## 11. Outros comandos
