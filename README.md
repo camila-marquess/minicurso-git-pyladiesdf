@@ -34,6 +34,10 @@ ssh-keygen -t rsa -C "seu-email-git"
 eval "$(ssh-agent -s)"
 ```
 
+```
+ssh-add
+```
+
 * Com a chave ssh gerada, vamos entrar na pasta onde ela está:
 
 ```
@@ -63,6 +67,10 @@ cat id_rsa.pub
 * Ainda no git bash, execute os comandos abaixo, substituindo o "username" para o seu nome de usuário(a) e "email" para o seu email utilizado ao criar a conta do GitHub: 
 
 ```
+cd ..
+```
+
+```
 git config --global user.name "username"
 ```
 
@@ -79,6 +87,8 @@ git config user.name
 ```
 git config user.email
 ```
+
+* OBS.: Se você tiver esse erro `bash: $'\302\203\302\203git: command not found`, verifique se existe espaço no início do seu comando (às vezes quando copiamos comandos do browser ele pode copiar com espaços).
 
 ## 5. Criando um repositório local
 
@@ -128,7 +138,7 @@ mkdir projeto-cpbsb6
 
 * E então você verá a mensagem 'Hello, World!' no seu browser.
 
-* Agora vá até o seu terminal e execute o seguinte comando: 
+* Agora abra novamente um terminal no seu VS code e execute o seguinte comando: 
 
 ```
 git init
@@ -159,8 +169,22 @@ git commit -m "feat: criando meu primeiro hello world"
 ```
 
 ```
-git push origin main
+git branch -M main
 ```
+
+```
+git push -u origin main
+```
+
+* Quando você rodar este último comando, pode ser que o VS Code abra um pop up para você se autenticar no GitHub, como o print abaixo: 
+
+![alt text](/prints/github_sign_in.png)
+
+* Basta clicar em 'Sign in with your browser' e depois em 'Authorize Visual-Studio-Code': 
+
+![alt text](/prints/authorize.png)
+
+* Feito isso, tente novamente fazer o push, caso ele não tenha sido finalizado.
 
 * Então volte à página do GitHub e atualize-a para verificar as suas mudanças.
 
@@ -280,3 +304,8 @@ O comando `git clone` é usado para criar uma cópia local de um repositório Gi
 
 
 `git clone <link-repo>`
+
+
+
+![alt text](image.png)
+
